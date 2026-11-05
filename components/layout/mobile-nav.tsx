@@ -2,6 +2,7 @@
 
 import { MenuIcon } from "lucide-react";
 import Link from "next/link";
+import { BreathingDot } from "@/components/ui/breathing-dot";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -11,14 +12,22 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { WhatsAppIcon } from "@/components/whatsapp-icon";
+import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 import { site, whatsappUrl } from "@/content/site";
+import { cn } from "@/lib/utils";
 
-export function MobileNav() {
+export function MobileNav({ isIsland = false }: { isIsland?: boolean }) {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon-lg" className="md:hidden">
+        <Button
+          variant="ghost"
+          size="icon-lg"
+          className={cn(
+            "rounded-full text-[#12301f] transition-colors hover:bg-gray-100 hover:text-[#0b2014] md:hidden",
+            isIsland && "size-9",
+          )}
+        >
           <MenuIcon className="size-5" />
           <span className="sr-only">Open menu</span>
         </Button>
@@ -42,6 +51,11 @@ export function MobileNav() {
         <div className="mt-auto p-4">
           <Button asChild size="lg" className="w-full">
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <BreathingDot
+                size="sm"
+                colorClassName="bg-[#5ce08e]"
+                pulseClassName="bg-[#7cc694]/65"
+              />
               <WhatsAppIcon />
               Chat on WhatsApp
             </a>
