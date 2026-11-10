@@ -1,10 +1,22 @@
 import type { Metadata } from "next";
-import { Lora, Poppins } from "next/font/google";
+import { Literata, Lora, Nunito, Poppins } from "next/font/google";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { WhatsAppButton } from "@/components/layout/whatsapp-button";
 import { site } from "@/content/site";
 import "./globals.css";
+
+const literata = Literata({
+  variable: "--font-literata",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const nunito = Nunito({
+  variable: "--font-nunito",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -32,7 +44,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${lora.variable} h-full scroll-smooth antialiased`}
+      className={`${poppins.variable} ${lora.variable} ${literata.variable} ${nunito.variable} h-full scroll-smooth antialiased`}
     >
       <body className="flex min-h-full flex-col">
         <SiteHeader />
