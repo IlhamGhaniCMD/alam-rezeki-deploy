@@ -1,13 +1,20 @@
 import Image from "next/image";
 import { BreathingDot } from "@/components/ui/breathing-dot";
+import { CoconutIllustration } from "@/components/ui/coconut-illustration";
 import { home } from "@/content/home";
 
 export function AboutSection() {
   const { about } = home;
 
   return (
-    <section id="about" className="bg-white py-20 sm:py-24">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+    <section
+      id="about"
+      className="relative overflow-hidden bg-white py-20 sm:py-24"
+    >
+      {/* Pinned to the viewport edge, outside the content container. */}
+      <CoconutIllustration className="pointer-events-none absolute top-1/2 right-0 w-72 translate-x-[30%] -translate-y-1/3 text-[#25854a] opacity-[0.06] sm:w-96 lg:w-136" />
+
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14">
           <div>
             <div className="inline-flex items-center gap-2.5">

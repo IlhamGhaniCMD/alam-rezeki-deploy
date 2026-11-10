@@ -6,7 +6,7 @@ export function HaulageSection() {
   const { haulage } = home.logistics;
 
   return (
-    <section className="bg-white py-20 sm:py-24">
+    <section className="bg-[#f6f9f4] py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid items-center gap-8 lg:grid-cols-12">
           <div className="lg:col-span-6">
@@ -36,7 +36,7 @@ export function HaulageSection() {
               {haulage.highlights.map((highlight) => (
                 <div
                   key={highlight.title}
-                  className="rounded-xl border border-[#e3ebe4] bg-[#f7faf6] p-3.5"
+                  className="rounded-xl border border-[#e1ebe3] bg-white p-3.5"
                 >
                   <p className="text-xs font-bold text-[#25854a]">
                     {highlight.title}

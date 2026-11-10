@@ -42,17 +42,22 @@ export function ProductsSection() {
       />
 
       {/* Top Atmospheric Plantation Banner fading into Dark Green */}
-      <div className="relative isolate overflow-hidden pt-20 pb-14 sm:pt-28 sm:pb-16">
+      <div className="relative isolate overflow-hidden pt-32 pb-14 sm:pt-48 sm:pb-16">
         <Image
           src={about.image}
           alt=""
           fill
           sizes="100vw"
-          className="object-cover object-center opacity-35"
+          className="object-cover object-center opacity-85"
+        />
+        {/* Bottom fade blends the photo into the section; the left fade keeps the copy readable. */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-b from-[#0f2217]/25 via-[#12261b]/45 via-55% to-[#12261b]"
         />
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-b from-[#0f2217]/50 via-[#12261b]/85 to-[#12261b]"
+          className="absolute inset-0 bg-gradient-to-r from-[#0f2217]/80 via-[#0f2217]/35 to-transparent"
         />
 
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6">

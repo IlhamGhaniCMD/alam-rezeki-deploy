@@ -1,13 +1,21 @@
 import Image from "next/image";
 import { BreathingDot } from "@/components/ui/breathing-dot";
+import { CoconutIllustration } from "@/components/ui/coconut-illustration";
 import { home } from "@/content/home";
 
 export function TestimonialsSection() {
   const { testimonials } = home;
 
   return (
-    <section id="testimonials" className="bg-[#fbfcf9] py-20 sm:py-24">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+    <section
+      id="testimonials"
+      className="relative overflow-hidden bg-[#f6f9f4] py-20 sm:py-24"
+    >
+      {/* Pinned to the viewport edges, outside the content container. */}
+      <CoconutIllustration className="pointer-events-none absolute bottom-10 left-0 w-64 translate-x-[-30%] -scale-x-100 text-[#25854a] opacity-[0.06] sm:w-80 lg:w-md" />
+      <CoconutIllustration className="pointer-events-none absolute top-10 right-0 w-64 translate-x-[30%] text-[#25854a] opacity-[0.06] sm:w-80 lg:w-md" />
+
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         {/* Top Centered Header */}
         <div className="mx-auto max-w-3xl text-center">
           <div className="inline-flex items-center justify-center gap-2.5">

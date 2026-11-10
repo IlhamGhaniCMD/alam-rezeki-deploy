@@ -18,6 +18,11 @@ export const home = {
   hero: {
     image: rbdCoconutOil,
     imageAlt: "Refined coconut oil and fresh coconuts on a wooden slab",
+    eyebrow: "Indonesian Coconut Exporter · Since 2018",
+    imageBadge: "RBD Coconut Oil",
+    coaCard: {
+      text: "Batch-specific COA issued with every shipment.",
+    },
     titlePrefix: "The Leading Supplier",
     titleConnector: "of",
     titleHighlight: "Coconut",
