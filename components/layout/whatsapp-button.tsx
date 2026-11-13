@@ -1,4 +1,4 @@
-import { WhatsAppIcon } from "@/components/whatsapp-icon";
+import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 import { whatsappUrl } from "@/content/site";
 
 export function WhatsAppButton() {

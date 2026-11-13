@@ -28,7 +28,7 @@ export function ProductFeature({
 
       <div className={`py-2 ${reversed ? "md:order-1" : ""}`}>
         <h2 className="font-display text-3xl font-medium tracking-tight text-foreground sm:text-4xl">
-          {product.name}
+          {product.fullName}
         </h2>
         <p className="mt-4 font-copy text-base leading-7 text-foreground/75">
           {product.summary}
@@ -54,7 +54,7 @@ type ProductDetailsProps = {
 function ProductDetails({ title, items }: ProductDetailsProps) {
   return (
     <section>
-      <h3 className="font-heading text-md font-semibold text-foreground">
+      <h3 className="font-sans text-md font-semibold text-foreground">
         {title}
       </h3>
       <ul className="mt-3 list-disc space-y-1 pl-4 font-copy text-sm leading-6 text-foreground/70 marker:text-primary">
