@@ -9,7 +9,7 @@ export function HaulageSection() {
     <section className="bg-[#f6f9f4] py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid items-center gap-8 lg:grid-cols-12">
-          <div className="lg:col-span-6">
+          <div className="lg:col-span-5">
             <div className="inline-flex items-center gap-2.5">
               <BreathingDot size="sm" />
               <span className="text-[11px] font-semibold tracking-widest text-[#24573a] uppercase">
@@ -50,7 +50,7 @@ export function HaulageSection() {
           </div>
 
           {/* 4-Image Asymmetric Bento Grid */}
-          <div className="grid grid-cols-12 gap-3 sm:gap-3.5 lg:col-span-6">
+          <div className="grid grid-cols-12 gap-3 sm:gap-3.5 lg:col-span-7">
             {haulage.images.map((img) => (
               <div
                 key={img.alt}
@@ -60,7 +60,7 @@ export function HaulageSection() {
                   src={img.src}
                   alt={img.alt}
                   fill
-                  sizes="(max-width: 1024px) 50vw, 30vw"
+                  sizes="(max-width: 1024px) 60vw, 40vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div
