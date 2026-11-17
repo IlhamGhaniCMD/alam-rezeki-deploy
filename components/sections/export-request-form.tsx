@@ -70,7 +70,7 @@ export function ExportRequestForm() {
       </p>
 
       <form onSubmit={handleSubmit} className="mt-6 space-y-5">
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div className="space-y-2">
             <Label
               htmlFor="commodity"
@@ -120,7 +120,7 @@ export function ExportRequestForm() {
           </div>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div className="space-y-2">
             <Label
               htmlFor="volume"
@@ -170,7 +170,7 @@ export function ExportRequestForm() {
           </div>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div className="space-y-2">
             <Label
               htmlFor="destination"
@@ -204,7 +204,7 @@ export function ExportRequestForm() {
           </div>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div className="space-y-2">
             <Label
               htmlFor="email"
