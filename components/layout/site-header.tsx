@@ -36,7 +36,7 @@ export function SiteHeader() {
     const delta = latest - previous;
     lastScrollY.current = latest;
 
-    // Zone 1: Top of page — standard full-width white header
+    // Zone 1: Top of page — borderless full-width header blending into the page background
     if (latest <= 24) {
       setIsIsland(false);
       setIsHidden(false);
@@ -64,7 +64,7 @@ export function SiteHeader() {
     <header
       className={cn(
         "pointer-events-none sticky top-0 z-50 flex h-16 w-full items-center justify-center px-3 transition-colors duration-200 sm:px-6",
-        !isIsland && "border-b border-gray-200 bg-white",
+        !isIsland && "bg-background",
       )}
     >
       {/* Outer wrapper controls vertical scroll hide/show & floating offset */}
