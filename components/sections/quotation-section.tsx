@@ -20,7 +20,7 @@ export function QuotationSection() {
   return (
     <section id="quotation" className="bg-[#f6f9f4] py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="grid items-start gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
+        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
           <div>
             <div className="inline-flex items-center gap-2.5">
               <BreathingDot />

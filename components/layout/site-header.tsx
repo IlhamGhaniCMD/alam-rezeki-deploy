@@ -72,7 +72,7 @@ export function SiteHeader() {
         initial={false}
         animate={{
           y: isHidden ? -88 : isIsland ? 10 : 0,
-          scale: isHidden ? 0.92 : isIsland && isHovered ? 1.015 : 1,
+          scale: isHidden ? 0.92 : 1,
           opacity: isHidden ? 0 : 1,
         }}
         transition={springTransition}
@@ -193,9 +193,16 @@ export function SiteHeader() {
                 pulseClassName="bg-[#7cc694]/65"
               />
               <WhatsAppIcon className="size-3.5 shrink-0" />
-              <span>
-                {isIsland && !isHovered ? "WhatsApp" : site.whatsapp.display}
-              </span>
+              {isIsland ? (
+                <span>WhatsApp</span>
+              ) : (
+                <>
+                  <span className="lg:hidden">WhatsApp</span>
+                  <span className="hidden lg:inline">
+                    {site.whatsapp.display}
+                  </span>
+                </>
+              )}
             </a>
 
             <MobileNav isIsland={isIsland} />

@@ -24,14 +24,8 @@ export async function SiteFooter() {
   return (
     <footer
       id="contact"
-      className="relative isolate overflow-hidden border-t border-[#1b3b2b] bg-[#11251a] text-white"
+      className="border-t border-neutral-800 bg-neutral-950 text-white"
     >
-      {/* Radial Emerald Glow */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -top-24 left-1/2 -z-10 h-80 w-3/4 -translate-x-1/2 rounded-full bg-[#25854a]/20 blur-3xl"
-      />
-
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {/* Column 1: Brand */}
@@ -155,7 +149,7 @@ export async function SiteFooter() {
       </div>
 
       {/* Bottom Bar: Copyright & Legal */}
-      <div className="border-t border-white/10 bg-[#0d1d14]">
+      <div className="border-t border-white/10 bg-black">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-5 text-xs text-white/60 sm:px-6 md:flex-row md:items-center md:justify-between">
           <p>
             &copy; {year} {site.name}. All rights reserved. Indonesian Coconut &
