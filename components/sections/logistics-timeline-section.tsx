@@ -52,7 +52,7 @@ export function LogisticsTimelineSection() {
             >
               {/* Step Operational Thumbnail & Step Label (Above Axis) */}
               <div className="w-full px-3">
-                <div className="relative mx-auto aspect-16/10 w-full max-w-[220px] overflow-hidden rounded-2xl border border-white/15 bg-black/25 shadow-md transition-all duration-300 group-hover:-translate-y-1 group-hover:border-[#7cc694]/60">
+                <div className="relative mx-auto aspect-16/10 w-full max-w-[220px] overflow-hidden rounded-lg border border-white/15 bg-black/25 shadow-md transition-all duration-300 group-hover:-translate-y-1 group-hover:border-[#7cc694]/60">
                   <Image
                     src={item.image}
                     alt={item.imageAlt}

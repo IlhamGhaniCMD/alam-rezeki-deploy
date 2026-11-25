@@ -1,6 +1,6 @@
 import { BadgeCheckIcon, DownloadIcon } from "lucide-react";
 import Link from "next/link";
-import { CoaCarousel } from "@/components/sections/coa-carousel";
+import { CoaCertificates } from "@/components/sections/coa-certificates";
 import { home } from "@/content/home";
 
 export function CoaSection() {
@@ -31,12 +31,14 @@ export function CoaSection() {
           </p>
         </div>
 
-        <div className="mt-12 grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
-          {/* Left: Framed COA Certificate Carousel */}
-          <CoaCarousel />
+        {/* All certificates, side by side */}
+        <div className="mt-12">
+          <CoaCertificates />
+        </div>
 
-          {/* Right: Tested Specimen Performance */}
-          <div className="flex flex-col justify-center">
+        {/* Tested Specimen Performance */}
+        <div className="mt-14 grid gap-10 rounded-2xl border border-[#dce6de] bg-white p-6 shadow-xs sm:p-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14 lg:p-10">
+          <div className="flex flex-col">
             <h3 className="font-heading text-2xl font-bold">
               {coa.performanceHeadingSegments.map((segment) => (
                 <span
@@ -53,31 +55,7 @@ export function CoaSection() {
               {coa.performanceDescription}
             </p>
 
-            <div className="mt-6 space-y-5">
-              {coa.metrics.map((metric) => (
-                <div key={metric.label}>
-                  <div className="flex flex-wrap items-baseline justify-between gap-2 text-xs">
-                    <span className="font-semibold text-[#182c20]">
-                      {metric.label}
-                    </span>
-                    <span className="font-semibold text-[#24573a]">
-                      {metric.value}
-                    </span>
-                  </div>
-                  <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-[#dfeae1]">
-                    <div
-                      className="h-full rounded-full bg-[#2b583e]"
-                      style={{ width: `${metric.percentage}%` }}
-                    />
-                  </div>
-                  <p className="mt-1.5 text-[11px] text-[#637368]">
-                    {metric.note}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-7">
+            <div className="mt-7 lg:mt-auto lg:pt-8">
               <Link
                 href={coa.ctaHref}
                 className="inline-flex h-11 items-center gap-2 rounded-full bg-[#244e35] px-5 text-xs font-semibold text-white transition-colors hover:bg-[#1c3e2a]"
@@ -87,6 +65,28 @@ export function CoaSection() {
               </Link>
               <p className="mt-3 text-[11px] text-[#637368]">{coa.footnote}</p>
             </div>
+          </div>
+
+          <div className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
+            {coa.metrics.map((metric) => (
+              <div key={metric.label}>
+                <p className="text-xs font-semibold text-[#182c20]">
+                  {metric.label}
+                </p>
+                <p className="mt-1 text-xs font-semibold text-[#24573a]">
+                  {metric.value}
+                </p>
+                <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-[#dfeae1]">
+                  <div
+                    className="h-full rounded-full bg-[#2b583e]"
+                    style={{ width: `${metric.percentage}%` }}
+                  />
+                </div>
+                <p className="mt-1.5 text-[11px] text-[#637368]">
+                  {metric.note}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
