@@ -8,14 +8,14 @@ const focusRing =
   "outline-none focus-visible:ring-2 focus-visible:ring-[#25854a] focus-visible:ring-offset-2";
 
 /**
- * Below `lg` the copy sits on white above the image card. From `lg` up the copy
+ * Below `lg` the copy sits on the page background above the image card. From `lg` up the copy
  * and the card share one grid cell, so the copy overlays a full-width card.
  */
 export function HeroSection() {
   const { hero } = home;
 
   return (
-    <section className="bg-white px-3 pt-8 pb-3 sm:px-6 sm:pt-12 lg:pt-4 lg:pb-0">
+    <section className="bg-background px-3 pt-8 pb-3 sm:px-6 sm:pt-12 lg:pt-4 lg:pb-0">
       <div className="grid gap-10 lg:gap-0">
         <div className="relative z-10 flex flex-col items-start px-1 sm:px-0 lg:col-start-1 lg:row-start-1 lg:justify-between lg:gap-12 lg:p-12 xl:p-14">
           <div>
